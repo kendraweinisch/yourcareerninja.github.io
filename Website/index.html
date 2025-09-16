@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encore Career Services for Executives | CareerNinja</title>
+    <meta name="description" content="CareerNinja provides encore career services for executives transitioning to meaningful post-career roles, fractional executive positions, and board service.">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1a5276;
+            --primary-dark: #0e2e44;
+            --secondary: #e67e22;
+            --secondary-dark: #bf6516;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --success: #27ae60;
+            --text: #333333;
+            --background: #f9f9f9;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            background-color: var(--background);
+            font-size: 1rem;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--dark);
+            line-height: 1.3;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+        }
+        
+        h2 {
+            font-size: 2.2rem;
+        }
+        
+        h3 {
+            font-size: 1.8rem;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Skip link for keyboard users */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--secondary);
+            color: white;
+            padding: 8px;
+            z-index: 10000;
+            text-decoration: none;
+        }
+        
+        .skip-link:focus {
+            top: 0;
+        }
+        
+        /* Focus styles */
+        a:focus,
+        button:focus,
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: 3px solid var(--secondary);
+            outline-offset: 2px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo:focus {
+            outline: 3px solid var(--secondary);
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+        
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        
+        .logo span {
+            color: var(--secondary);
+        }
+        
+        /* Mobile menu */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            background: transparent;
+            border: 2px solid transparent;
+            border-radius: 4px;
+            padding: 5px;
+        }
+        
+        .menu-toggle:focus {
+            outline: 3px solid var(--secondary);
+            outline-offset: 2px;
+        }
+        
+        .menu-toggle span {
+            height: 3px;
+            width: 100%;
+            background-color: var(--dark);
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            transition: color 0.3s;
+            padding: 5px;
+            border-radius: 4px;
+        }
+        
+        nav ul li a:hover,
+        nav ul li a:focus {
+            color: var(--secondary);
+            background-color: rgba(230, 126, 34, 0.1);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 8rem 0 4rem;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin: 0 auto 2rem;
+            max-width: 700px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--secondary);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid var(--secondary);
+            cursor: pointer;
+            margin: 0.5rem;
+            font-size: 1rem;
+        }
+        
+        .btn:hover {
+            background-color: var(--secondary-dark);
+            border-color: var(--secondary-dark);
+        }
+        
+        .btn:focus {
+            outline: 3px solid white;
+            outline-offset: 2px;
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid white;
+        }
+        
+        .btn-outline:hover {
+            background-color: white;
+            color: var(--primary);
+        }
+        
+        .author-badge {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            margin-top: 2rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        .author-badge img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 1rem;
+            border: 2px solid white;
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 5rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title h2 {
+            font-size: 2.2rem;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary);
+        }
+        
+        /* Problem Section */
+        .problem-content {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            line-height: 1.8;
+        }
+        
+        .problem-content p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .problem-content ul {
+            margin-left: 1.5rem;
+            margin-top: 1rem;
+        }
+        
+        .problem-content li {
+            margin-bottom: 1rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .problem-content li:before {
+            content: '•';
+            color: var(--secondary);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+            font-size: 1.2rem;
+        }
+        
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .service-card:hover,
+        .service-card:focus-within {
+            transform: translateY(-10px);
+        }
+        
+        .service-image {
+            height: 200px;
+            background-color: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #777;
+            position: relative;
+        }
+        
+        .service-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--secondary);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .service-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .service-content h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .service-duration {
+            color: #777;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .service-features {
+            margin: 1rem 0;
+            flex-grow: 1;
+        }
+        
+        .service-features li {
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .service-features li:before {
+            content: '✓';
+            color: var(--success);
+            position: absolute;
+            left: 0;
+        }
+        
+        .service-price {
+            color: var(--secondary);
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin: 1rem 0;
+            text-align: center;
+        }
+        
+        .service-cta {
+            text-align: center;
+            margin-top: auto;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            background-color: var(--light);
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .testimonial-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        
+        .testimonial-text:before {
+            content: """;
+            font-size: 4rem;
+            color: var(--secondary);
+            opacity: 0.2;
+            position: absolute;
+            top: -1.5rem;
+            left: -1rem;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .testimonial-author img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 1rem;
+        }
+        
+        .testimonial-author-info {
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        .testimonial-role {
+            font-size: 0.9rem;
+            color: #777;
+            font-weight: normal;
+        }
+        
+        /* Process Section */
+        .process-steps {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+        }
+        
+        .step {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+            padding: 0 1rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 1rem;
+        }
+        
+        /* Book Section */
+        .book-section {
+            background: linear-gradient(to right, var(--primary) 50%, var(--primary-dark) 50%);
+            color: white;
+        }
+        
+        .book-container {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .book-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .book-image-placeholder {
+            width: 280px;
+            height: 380px;
+            background-color: #ddd;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #777;
+            font-style: italic;
+            border-radius: 5px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .book-content {
+            flex: 1;
+            min-width: 300px;
+            padding: 2rem;
+        }
+        
+        .book-content h2 {
+            color: white;
+        }
+        
+        /* CTA Section */
+        .cta {
+            text-align: center;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+        }
+        
+        .cta h2 {
+            color: white;
+        }
+        
+        .cta .btn {
+            background-color: white;
+            color: var(--primary);
+            margin-top: 1.5rem;
+        }
+        
+        .cta .btn:hover {
+            background-color: var(--light);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-column {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 2rem;
+            padding: 0 1rem;
+        }
+        
+        .footer-column h3 {
+            color: white;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--secondary);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-column ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+        
+        .footer-column ul li a:hover,
+        .footer-column ul li a:focus {
+            color: var(--secondary);
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: white;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        
+        .social-links a:hover,
+        .social-links a:focus {
+            background: var(--secondary);
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            z-index: 1001;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+        
+        .modal-content {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            max-width: 800px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: #eee;
+            border: 2px solid transparent;
+        }
+        
+        .close-modal:focus {
+            outline: 3px solid var(--secondary);
+            outline-offset: 2px;
+        }
+        
+        .calendly-info {
+            background-color: #f9f9f9;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            text-align: center;
+        }
+        
+        .calendly-info i {
+            color: var(--secondary);
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* High contrast mode support */
+        @media (prefers-contrast: high) {
+            :root {
+                --primary: #000080;
+                --secondary: #ffa500;
+                --text: #000000;
+                --background: #ffffff;
+            }
+            
+            .hero, .cta {
+                background: #000080;
+            }
+        }
+        
+        /* Reduced motion support */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            
+            .service-card:hover {
+                transform: none;
+            }
+        }
+        
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: row;
+                text-align: center;
+            }
+            
+            .menu-toggle {
+                display: flex;
+            }
+            
+            nav {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 80%;
+                height: calc(100vh - 70px);
+                background: white;
+                flex-direction: column;
+                transition: all 0.3s ease;
+                box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+                z-index: 999;
+                padding: 2rem;
+            }
+            
+            nav.active {
+                left: 0;
+            }
+            
+            nav ul {
+                flex-direction: column;
+            }
+            
+            nav ul li {
+                margin: 1rem 0;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .process-steps {
+                flex-direction: column;
+            }
+            
+            .book-container {
+                flex-direction: column;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+            }
+            
+            .problem-content {
+                padding: 1.5rem;
+            }
+            
+            .problem-content li {
+                margin-bottom: 1.2rem;
+                line-height: 1.6;
+            }
+        }
+        
+        @media (min-width: 1200px) {
+            .services-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip link for keyboard users -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <!-- Replace with your actual logo -->
+                <div style="width: 40px; height: 40px; background: var(--secondary); border-radius: 5px; margin-right: 10px; display: flex; align-items: center; justify-content: center; color: white;">
+                    <i class="fas fa-user-ninja" aria-hidden="true"></i>
+                </div>
+                Career<span>Ninja</span>
+            </a>
+            
+            <button class="menu-toggle" id="mobile-menu" aria-label="Open navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <nav id="nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#process">Process</a></li>
+                    <li><a href="#testimonials">Success Stories</a></li>
+                    <li><a href="#book">Book</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="main-content" tabindex="-1">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Launch Your Meaningful Encore Career</h1>
+                <p>For accomplished executives ready to transform their success into purpose-driven impact</p>
+                <div>
+                    <a href="#" class="btn" id="cta-button">Schedule Your Strategy Session</a>
+                    <a href="#services" class="btn btn-outline">Explore Services</a>
+                </div>
+                
+                <div class="author-badge">
+                    <!-- Replace with your photo -->
+<img src="public/images/author-photo.jpg" alt="Author Photo" width="50" height="50" style="border-radius: 50%;">                    <div>
+                        <p>Author of the upcoming book: <strong>"The Encore Executive"</strong></p>
+                        <small>Redefining Retirement, Unretirement, and Part-Time C-Suite Leadership</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section id="problem">
+        <div class="container">
+            <div class="section-title">
+                <h2>The Executive Transition Challenge</h2>
+            </div>
+            <div class="problem-content">
+                <p>After decades of climbing the corporate ladder, you've reached the pinnacle of success. But now you find yourself asking: "What's next?" The transition from corporate leadership to a meaningful encore career is fraught with unique challenges:</p>
+                <ul>
+                    <li>Uncertainty about how to translate corporate skills to the social impact sector</li>
+                    <li>Lack of clarity about which cause areas align with your values and expertise</li>
+                    <li>Difficulty navigating the very different landscape of nonprofit and social enterprise</li>
+                    <li>Concerns about financial sustainability while making a difference</li>
+                    <li>Balancing part-time C-suite roles with personal fulfillment goals</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" aria-labelledby="services-heading">
+        <div class="container">
+            <div class="section-title">
+                <h2 id="services-heading">Executive Encore Career Services</h2>
+                <p>Tailored programs designed for seasoned executives transitioning to meaningful encore careers</p>
+            </div>
+            <div class="services-grid">
+                <!-- Introductory Chat -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <span aria-hidden="true"><i class="fas fa-comments fa-3x" style="color: #1a5276;"></i></span>
+                        <div class="service-badge">COMPLIMENTARY</div>
+                    </div>
+                    <div class="service-content">
+                        <h3>Executive Encore Strategy Session</h3>
+                        <div class="service-duration">15 minutes</div>
+                        <p>Discover how unretirement coaching can transform your corporate expertise into purposeful impact.</p>
+                        <ul class="service-features">
+                            <li>Personalized encore career assessment</li>
+                            <li>Identification of optimal transition pathways</li>
+                            <li>Customized action plan outline</li>
+                            <li>No sales pitch - just expert guidance</li>
+                        </ul>
+                        <div class="service-price">$0</div>
+                        <div class="service-cta">
+                            <a href="#" class="btn" data-service="Strategy Session">BOOK NOW</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Hourly Rates -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <span aria-hidden="true"><i class="fas fa-clock fa-3x" style="color: #1a5276;"></i></span>
+                    </div>
+                    <div class="service-content">
+                        <h3>Executive Career Coaching</h3>
+                        <div class="service-duration">60 minutes</div>
+                        <p>À la carte executive career coaching for targeted support during your transition.</p>
+                        <ul class="service-features">
+                            <li>Personalized career transition roadmap</li>
+                            <li>Executive resume and LinkedIn optimization</li>
+                            <li>Interview preparation and negotiation strategy</li>
+                            <li>Career clarity and purpose alignment session</li>
+                            <li>Flexible, focused, and actionable guidance</li>
+                        </ul>
+                        <div class="service-price">$200</div>
+                        <div class="service-cta">
+                            <a href="#" class="btn" data-service="Career Coaching">BOOK NOW</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Fractional Executive Launch -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <span aria-hidden="true"><i class="fas fa-briefcase fa-3x" style="color: #1a5276;"></i></span>
+                        <div class="service-badge">MOST POPULAR</div>
+                    </div>
+                    <div class="service-content">
+                        <h3>Fractional Executive Launch Program</h3>
+                        <div class="service-duration">4-week intensive program</div>
+                        <p>Position yourself as a top-tier "rent-a-CXO" for startups and growing organizations.</p>
+                        <ul class="service-features">
+                            <li>Executive positioning strategy development</li>
+                            <li>Premium application materials portfolio</li>
+                            <li>Industry-specific networking scripts & outreach system</li>
+                            <li>Client contract templates & negotiation playbook</li>
+                            <li>Executive branding package (LinkedIn, bio, pitch)</li>
+                            <li>Direct introduction to our partner network</li>
+                        </ul>
+                        <div class="service-price">$5,000</div>
+                        <div class="service-cta">
+                            <a href="#" class="btn" data-service="Fractional Executive">BOOK NOW</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Board-Ready Accelerator -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <span aria-hidden="true"><i class="fas fa-chalkboard-teacher fa-3x" style="color: #1a5276;"></i></span>
+                        <div class="service-badge">PREMIUM</div>
+                    </div>
+                    <div class="service-content">
+                        <h3>Board-Ready Accelerator Program</h3>
+                        <div class="service-duration">6-week comprehensive program</div>
+                        <p>Fast-track your journey to influential corporate and nonprofit board positions.</p>
+                        <ul class="service-features">
+                            <li>NACD Directorship Certification (NACD.DC) preparation</li>
+                            <li>Complete Director Portfolio development</li>
+                            <li>Executive LinkedIn profile transformation</li>
+                            <li>Board-specific resume and bio creation</li>
+                            <li>Three simulated board interview sessions</li>
+                            <li>Board search strategy and networking plan</li>
+                            <li>Access to exclusive board opportunity network</li>
+                        </ul>
+                        <div class="service-price">$7,000</div>
+                        <div class="service-cta">
+                            <a href="#" class="btn" data-service="Board Accelerator">BOOK NOW</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="calendly-info">
+                <i class="fas fa-calendar-check"></i>
+                <p><strong>Easy Booking & Payment:</strong> All scheduling and payment processing is handled securely through Calendly.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials" aria-labelledby="testimonials-heading">
+        <div class="container">
+            <div class="section-title">
+                <h2 id="testimonials-heading">Success Stories</h2>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"After 30 years in finance, I wanted to bring my expertise to education reform. Kendra helped me navigate the transition and I'm now serving as CFO for a national education nonprofit, making more impact than I ever imagined."</p>
+                    <div class="testimonial-author">
+                        <!-- Replace with client photo -->
+                        <div class="testimonial-author-info">
+                            Michael T. <span class="testimonial-role">Former Investment Banker</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"The Board Placement Program was exactly what I needed. Within four months, I was placed on the board of an environmental organization that aligns perfectly with my values and allows me to contribute at a strategic level."</p>
+                    <div class="testimonial-author">
+                        <!-- Replace with client photo -->
+                        <div class="testimonial-author-info">
+                            Susan L. <span class="testimonial-role">Former Tech Executive</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"As a semi-retired executive, I wanted meaningful part-time work. Kendra helped me move into a fractional CMO role that still allows flexibility."</p>
+                    <div class="testimonial-author">
+                        <!-- Replace with client photo -->
+                        <div class="testimonial-author-info">
+                            Robert K. <span class="testimonial-role">Former Fortune 500 CMO</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" aria-labelledby="process-heading">
+        <div class="container">
+            <div class="section-title">
+                <h2 id="process-heading">The Process</h2>
+            </div>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Discovery</h3>
+                    <p>We begin with deep assessment of your skills, values, and impact goals</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Strategy</h3>
+                    <p>We identify and evaluate potential pathways that match your criteria</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Preparation</h3>
+                    <p>We equip you with the tools, messaging, and connections needed</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Launch</h3>
+                    <p>We support your transition into a fulfilling encore career</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Book Section -->
+<section class="book-section" id="book" aria-labelledby="book-heading">
+    <div class="container book-container">
+        <div class="book-image">
+            <img src="public/images/book-cover.png" alt="Book Cover: The Encore Executive" width="280" height="380">
+        </div>
+        <div class="book-content">
+            <h2 id="book-heading">Discover Your Next Chapter</h2>
+            <p>In my upcoming book <strong>"The Encore Executive: Redefining Retirement, Unretirement, and Part-Time C-Suite Leadership"</strong>, I share insights from working with hundreds of executives navigating their career transitions.</p>
+            <p>Learn how to:</p>
+        </br>
+            <ul>
+                <li>Leverage your executive experience for social impact</li>
+                <li>Create a portfolio career that matches your desired lifestyle</li>
+                <li>Navigate the startup and nonprofit landscapes</li>
+                <li>Secure meaningful board positions and advisory roles</li>
+                <li>Balance financial needs with purposeful work</li>
+            </ul>
+        </br>
+            <p><strong>Be the first to know when the book launches!</strong></p>
+    </br>
+            <a href="#" class="btn" id="book-notify">Notify Me</a>
+        </div>
+    </div>
+</section>
+    <!-- CTA Section -->
+    <section class="cta" aria-labelledby="cta-heading">
+        <div class="container">
+            <h2 id="cta-heading">Ready to Transform Your Success Into Significance?</h2>
+            <p>Book your complimentary 15-minute Encore Career Assessment today</p>
+            <a href="#" class="btn" id="final-cta-button">Schedule Your Free Assessment</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>CareerNinja</h3>
+                    <p>Helping accomplished executives launch meaningful encore careers that leverage their expertise.</p>
+                    
+                </div>
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#services">Encore Career Strategy Session</a></li>
+                        <li><a href="#services">Executive Career Coaching</a></li>
+                        <li><a href="#services">Fractional Executive Launch</a></li>
+                        <li><a href="#services">Board-Ready Accelerator</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope" aria-hidden="true"></i> info@careerninja.com</li>
+                    </ul>
+                     <div class="social-links">
+                        <a href="#" aria-label="Visit My LinkedIn page"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Visit My Twitter page"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Visit our Facebook page"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Visit our Instagram page"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CareerNinja. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+   <!-- Booking Modal -->
+<div class="modal" id="booking-modal" role="dialog" aria-labelledby="modal-title" aria-modal="true" hidden>
+    <!-- ... your booking modal content ... -->
+</div>
+
+<!-- Book Notification Modal - MOVED BEFORE THE SCRIPT TAG -->
+<div class="modal" id="book-notify-modal" role="dialog" aria-labelledby="book-modal-title" aria-modal="true" hidden>
+    <div class="modal-content" style="max-width: 500px;">
+        <button class="close-modal" aria-label="Close modal">&times;</button>
+        <h2 id="book-modal-title">Get Notified When "The Encore Executive" Launches</h2>
+        <p>Be the first to know when my new book on encore careers, unretirement, and part-time C-suite executives is available.</p>
+        
+        <form id="book-notify-form" action="https://formsubmit.co/info@yourcareerninja.com" method="POST" style="margin-top: 1.5rem;">
+            <!-- FormSubmit.co configuration -->
+            <input type="hidden" name="_subject" value="New Book Notification Signup">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" value="https://yourcareerninja.com/thank-you.html">
+            <input type="hidden" name="_captcha" value="false">
+            
+            <div style="margin-bottom: 1rem;">
+                <label for="notify-name" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Your Name</label>
+                <input type="text" id="notify-name" name="name" placeholder="First and Last Name" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px;" required>
+            </div>
+            <div style="margin-bottom: 1.5rem;">
+                <label for="notify-email" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Email Address</label>
+                <input type="email" id="notify-email" name="email" placeholder="your@email.com" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px;" required>
+            </div>
+            <div style="margin-bottom: 1.5rem;">
+                <label style="display: flex; align-items: start;">
+                    <input type="checkbox" name="consent" required style="margin-right: 0.5rem; margin-top: 0.2rem;">
+                    <span>I agree to receive updates about "The Encore Executive" book launch. I can unsubscribe at any time.</span>
+                </label>
+            </div>
+            <button type="submit" class="btn" style="width: 100%;">Notify Me When the Book Launches</button>
+        </form>
+        
+        <div id="book-notify-success" style="display: none; text-align: center; padding: 2rem;">
+            <i class="fas fa-check-circle" style="font-size: 3rem; color: var(--success); margin-bottom: 1rem;"></i>
+            <h3>Thank You!</h3>
+            <p>You've been added to our notification list. We'll email you when "The Encore Executive" is available.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Your JavaScript code here
+    // Mobile menu functionality
+    const mobileMenu = document.getElementById('mobile-menu');
+    const nav = document.getElementById('nav');
+    
+    // ... rest of your JavaScript code ...
+    
+    // REPLACE the simple book notification code with this:
+    
+    // Book notification modal functionality
+    const bookNotifyModal = document.getElementById('book-notify-modal');
+    const bookNotifyBtn = document.getElementById('book-notify');
+    const bookNotifyForm = document.getElementById('book-notify-form');
+    const bookNotifySuccess = document.getElementById('book-notify-success');
+    const closeBookModal = bookNotifyModal.querySelector('.close-modal');
+
+    // Open book notification modal
+    bookNotifyBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        bookNotifyModal.removeAttribute('hidden');
+        bookNotifyModal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+        document.getElementById('notify-name').focus();
+    });
+
+    // Close book notification modal
+    closeBookModal.addEventListener('click', function() {
+        bookNotifyModal.setAttribute('hidden', 'true');
+        bookNotifyModal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    });
+
+    // Close modal when clicking outside
+    bookNotifyModal.addEventListener('click', function(e) {
+        if (e.target === bookNotifyModal) {
+            bookNotifyModal.setAttribute('hidden', 'true');
+            bookNotifyModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && !bookNotifyModal.hasAttribute('hidden')) {
+            bookNotifyModal.setAttribute('hidden', 'true');
+            bookNotifyModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
+
+    // Handle form submission
+    bookNotifyForm.addEventListener('submit', function(e) {
+        // Let FormSubmit.co handle the actual submission
+        // We'll just show a success message
+        e.preventDefault();
+        bookNotifyForm.style.display = 'none';
+        bookNotifySuccess.style.display = 'block';
+        
+        // Keep the modal open for 3 seconds so users see the success message
+        setTimeout(function() {
+            bookNotifyModal.setAttribute('hidden', 'true');
+            bookNotifyModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+            // Reset form for next time
+            bookNotifyForm.reset();
+            bookNotifyForm.style.display = 'block';
+            bookNotifySuccess.style.display = 'none';
+        }, 3000);
+        
+        // Submit the form programmatically after showing success message
+        setTimeout(function() {
+            // Create a temporary form submission
+            const formData = new FormData(bookNotifyForm);
+            fetch(bookNotifyForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                console.log('Form submitted successfully');
+            }).catch(error => {
+                console.log('Form submission error:', error);
+            });
+        }, 1000);
+    });
+</script>
+
+</body>
+</html>
