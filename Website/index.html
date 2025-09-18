@@ -16,6 +16,7 @@
             --light: #ecf0f1;
             --dark: #2c3e50;
             --success: #27ae60;
+            --error: #e74c3c;
             --text: #333333;
             --background: #f9f9f9;
         }
@@ -29,36 +30,40 @@
         body {
             font-family: 'Open Sans', sans-serif;
             color: var(--text);
-            line-height: 1.6;
+            line-height: 1.7;
             background-color: var(--background);
-            font-size: 1rem;
+            font-size: 18px;
         }
         
         h1, h2, h3, h4 {
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
-            margin-bottom: 1rem;
+            margin-bottom: 1.2rem;
             color: var(--dark);
-            line-height: 1.3;
+            line-height: 1.4;
         }
         
         h1 {
-            font-size: 2.8rem;
+            font-size: 3.2rem;
         }
         
         h2 {
-            font-size: 2.2rem;
+            font-size: 2.6rem;
         }
         
         h3 {
-            font-size: 1.8rem;
+            font-size: 2rem;
+        }
+        
+        h4 {
+            font-size: 1.6rem;
         }
         
         .container {
             width: 90%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 15px;
+            padding: 0 20px;
         }
         
         /* Skip link for keyboard users */
@@ -68,13 +73,15 @@
             left: 0;
             background: var(--secondary);
             color: white;
-            padding: 8px;
+            padding: 12px;
             z-index: 10000;
             text-decoration: none;
+            font-size: 1.1rem;
+            border-radius: 4px;
         }
         
         .skip-link:focus {
-            top: 0;
+            top: 20px;
         }
         
         /* Focus styles */
@@ -84,7 +91,7 @@
         select:focus,
         textarea:focus {
             outline: 3px solid var(--secondary);
-            outline-offset: 2px;
+            outline-offset: 3px;
         }
         
         /* Header Styles */
@@ -101,13 +108,13 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 0;
+            padding: 1.2rem 0;
         }
         
         .logo {
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
-            font-size: 1.8rem;
+            font-size: 2rem;
             color: var(--primary);
             text-decoration: none;
             display: flex;
@@ -116,13 +123,13 @@
         
         .logo:focus {
             outline: 3px solid var(--secondary);
-            outline-offset: 2px;
+            outline-offset: 3px;
             border-radius: 4px;
         }
         
         .logo img {
-            height: 40px;
-            margin-right: 10px;
+            height: 50px;
+            margin-right: 12px;
         }
         
         .logo span {
@@ -134,22 +141,22 @@
             display: none;
             flex-direction: column;
             justify-content: space-around;
-            width: 40px;
-            height: 40px;
+            width: 50px;
+            height: 50px;
             cursor: pointer;
             background: transparent;
             border: 2px solid transparent;
             border-radius: 4px;
-            padding: 5px;
+            padding: 8px;
         }
         
         .menu-toggle:focus {
             outline: 3px solid var(--secondary);
-            outline-offset: 2px;
+            outline-offset: 3px;
         }
         
         .menu-toggle span {
-            height: 3px;
+            height: 4px;
             width: 100%;
             background-color: var(--dark);
             border-radius: 5px;
@@ -162,7 +169,7 @@
         }
         
         nav ul li {
-            margin-left: 1.5rem;
+            margin-left: 2rem;
         }
         
         nav ul li a {
@@ -170,8 +177,9 @@
             color: var(--dark);
             font-weight: 600;
             transition: color 0.3s;
-            padding: 5px;
+            padding: 8px;
             border-radius: 4px;
+            font-size: 1.1rem;
         }
         
         nav ul li a:hover,
@@ -182,7 +190,7 @@
         
         /* Hero Section */
         .hero {
-            padding: 8rem 0 4rem;
+            padding: 10rem 0 5rem;
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
             color: white;
             text-align: center;
@@ -194,20 +202,21 @@
         }
         
         .hero h1 {
-            font-size: 2.8rem;
-            margin-bottom: 1.5rem;
+            font-size: 3.2rem;
+            margin-bottom: 1.8rem;
             color: white;
         }
         
         .hero p {
-            font-size: 1.2rem;
-            margin: 0 auto 2rem;
+            font-size: 1.4rem;
+            margin: 0 auto 2.5rem;
             max-width: 700px;
+            line-height: 1.8;
         }
         
         .btn {
             display: inline-block;
-            padding: 12px 30px;
+            padding: 16px 36px;
             background-color: var(--secondary);
             color: white;
             text-decoration: none;
@@ -216,8 +225,8 @@
             transition: all 0.3s ease;
             border: 2px solid var(--secondary);
             cursor: pointer;
-            margin: 0.5rem;
-            font-size: 1rem;
+            margin: 0.8rem;
+            font-size: 1.2rem;
         }
         
         .btn:hover {
@@ -227,7 +236,7 @@
         
         .btn:focus {
             outline: 3px solid white;
-            outline-offset: 2px;
+            outline-offset: 3px;
         }
         
         .btn-outline {
@@ -244,36 +253,42 @@
             display: inline-flex;
             align-items: center;
             background: rgba(255, 255, 255, 0.2);
-            padding: 0.8rem 1.5rem;
+            padding: 1rem 2rem;
             border-radius: 50px;
-            margin-top: 2rem;
+            margin-top: 2.5rem;
             backdrop-filter: blur(10px);
         }
         
         .author-badge img {
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             object-fit: cover;
-            margin-right: 1rem;
+            margin-right: 1.2rem;
             border: 2px solid white;
         }
-        
+        .book-image img {
+    border-radius: 5px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    width: 100%;
+    height: auto;
+    max-width: 280px;
+}
         /* Section Styles */
         section {
-            padding: 5rem 0;
+            padding: 6rem 0;
         }
         
         .section-title {
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 4rem;
         }
         
         .section-title h2 {
-            font-size: 2.2rem;
+            font-size: 2.6rem;
             position: relative;
             display: inline-block;
-            padding-bottom: 10px;
+            padding-bottom: 12px;
         }
         
         .section-title h2:after {
@@ -282,33 +297,35 @@
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
+            width: 100px;
+            height: 4px;
             background-color: var(--secondary);
         }
         
         /* Problem Section */
         .problem-content {
             background: white;
-            padding: 2.5rem;
+            padding: 3rem;
             border-radius: 8px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            line-height: 1.8;
+            line-height: 1.9;
+            font-size: 1.1rem;
         }
         
         .problem-content p {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.8rem;
         }
         
         .problem-content ul {
-            margin-left: 1.5rem;
-            margin-top: 1rem;
+            margin-left: 2rem;
+            margin-top: 1.5rem;
         }
         
         .problem-content li {
-            margin-bottom: 1rem;
+            margin-bottom: 1.2rem;
             position: relative;
-            padding-left: 1.5rem;
+            padding-left: 2rem;
+            font-size: 1.1rem;
         }
         
         .problem-content li:before {
@@ -318,14 +335,14 @@
             display: inline-block;
             width: 1em;
             margin-left: -1em;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
         }
         
         /* Services Section */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
         }
         
         .service-card {
@@ -344,29 +361,30 @@
         }
         
         .service-image {
-            height: 200px;
+            height: 220px;
             background-color: #f5f5f5;
             display: flex;
             align-items: center;
             justify-content: center;
             color: #777;
             position: relative;
+            font-size: 1.1rem;
         }
         
         .service-badge {
             position: absolute;
-            top: 1rem;
-            right: 1rem;
+            top: 1.2rem;
+            right: 1.2rem;
             background: var(--secondary);
             color: white;
-            padding: 0.3rem 0.8rem;
+            padding: 0.5rem 1rem;
             border-radius: 20px;
-            font-size: 0.8rem;
+            font-size: 1rem;
             font-weight: 600;
         }
         
         .service-content {
-            padding: 1.5rem;
+            padding: 2rem;
             flex-grow: 1;
             display: flex;
             flex-direction: column;
@@ -374,24 +392,25 @@
         
         .service-content h3 {
             color: var(--primary);
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.8rem;
         }
         
         .service-duration {
             color: #777;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            margin-bottom: 1.2rem;
         }
         
         .service-features {
-            margin: 1rem 0;
+            margin: 1.2rem 0;
             flex-grow: 1;
         }
         
         .service-features li {
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.8rem;
             position: relative;
-            padding-left: 1.5rem;
+            padding-left: 2rem;
+            font-size: 1.1rem;
         }
         
         .service-features li:before {
@@ -399,13 +418,15 @@
             color: var(--success);
             position: absolute;
             left: 0;
+            font-weight: bold;
+            font-size: 1.2rem;
         }
         
         .service-price {
             color: var(--secondary);
             font-weight: 700;
-            font-size: 1.5rem;
-            margin: 1rem 0;
+            font-size: 1.8rem;
+            margin: 1.2rem 0;
             text-align: center;
         }
         
@@ -421,30 +442,32 @@
         
         .testimonial-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
         }
         
         .testimonial-card {
             background: white;
-            padding: 2rem;
+            padding: 2.5rem;
             border-radius: 8px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
         
         .testimonial-text {
             font-style: italic;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
             position: relative;
+            font-size: 1.1rem;
+            line-height: 1.8;
         }
         
         .testimonial-text:before {
             content: """;
-            font-size: 4rem;
+            font-size: 5rem;
             color: var(--secondary);
             opacity: 0.2;
             position: absolute;
-            top: -1.5rem;
+            top: -2rem;
             left: -1rem;
         }
         
@@ -454,20 +477,21 @@
         }
         
         .testimonial-author img {
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             object-fit: cover;
-            margin-right: 1rem;
+            margin-right: 1.2rem;
         }
         
         .testimonial-author-info {
             font-weight: 600;
             color: var(--primary);
+            font-size: 1.1rem;
         }
         
         .testimonial-role {
-            font-size: 0.9rem;
+            font-size: 1rem;
             color: #777;
             font-weight: normal;
         }
@@ -477,75 +501,186 @@
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
-            margin-top: 3rem;
+            margin-top: 4rem;
         }
         
         .step {
             flex: 1;
             min-width: 250px;
             text-align: center;
-            padding: 0 1rem;
-            margin-bottom: 2rem;
+            padding: 0 1.5rem;
+            margin-bottom: 2.5rem;
             position: relative;
         }
         
         .step-number {
-            width: 60px;
-            height: 60px;
+            width: 70px;
+            height: 70px;
             background: var(--primary);
             color: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             font-weight: 700;
-            margin: 0 auto 1rem;
+            margin: 0 auto 1.5rem;
         }
         
-        /* Book Section */
-        .book-section {
-            background: linear-gradient(to right, var(--primary) 50%, var(--primary-dark) 50%);
-            color: white;
+        .step h3 {
+            font-size: 1.5rem;
         }
         
-        .book-container {
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
+        .step p {
+            font-size: 1.1rem;
         }
         
-        .book-image {
-            flex: 1;
-            min-width: 300px;
-            text-align: center;
-            padding: 2rem;
-        }
-        
-        .book-image-placeholder {
-            width: 280px;
-            height: 380px;
-            background-color: #ddd;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #777;
-            font-style: italic;
-            border-radius: 5px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-        
-        .book-content {
-            flex: 1;
-            min-width: 300px;
-            padding: 2rem;
-        }
-        
-        .book-content h2 {
-            color: white;
-        }
-        
+    /* Book Section */
+.book-section {
+    background: linear-gradient(to right, var(--primary) 50%, var(--primary-dark) 50%);
+    color: white;
+}
+
+.book-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.book-image {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+    padding: 2.5rem;
+}
+
+.book-cover {
+    width: 280px;
+    height: 380px;
+    background-color: #ddd;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777;
+    font-style: italic;
+    border-radius: 5px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    font-size: 1.1rem;
+}
+
+.book-content {
+    flex: 1;
+    min-width: 300px;
+    padding: 2.5rem;
+}
+
+.book-content h2 {
+    color: white;
+    text-align: center;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.book-content h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--secondary);
+    border-radius: 2px;
+}
+
+.book-content p, .book-content li {
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+}
+
+.book-content .intro {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.coaching-standards .section-title h2 {
+    color: white;
+}
+
+.book-section .section-title h2 {
+    color: white !important;
+}
+
+/* Learn How To Section - Gray Box */
+.learn-list {
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    padding: 25px;
+    margin: 30px 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.learn-list h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+}
+
+.learn-list ul {
+    list-style: none;
+    margin-bottom: 0;
+}
+
+.learn-list li {
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 30px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.learn-list li:before {
+    content: '✓';
+    color: var(--secondary);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.2rem;
+}
+
+/* CTA Box */
+.cta-box {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+.cta-box p {
+    font-weight: 600;
+    color: white;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+/* Responsive adjustments for book section */
+@media (max-width: 768px) {
+    .book-container {
+        flex-direction: column;
+    }
+    
+    .book-content {
+        padding: 30px;
+    }
+    
+    .book-content h2 {
+        font-size: 2rem;
+    }
+}
         /* CTA Section */
         .cta {
             text-align: center;
@@ -557,42 +692,105 @@
             color: white;
         }
         
+        .cta p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+        }
+        
         .cta .btn {
             background-color: white;
             color: var(--primary);
-            margin-top: 1.5rem;
+            margin-top: 2rem;
         }
         
         .cta .btn:hover {
             background-color: var(--light);
         }
         
+        /* New Section: Navigating the Emotional Journey */
+        .emotional-journey {
+            background-color: var(--light);
+        }
+        
+        .emotional-content {
+            background: white;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            line-height: 1.9;
+        }
+        
+        .emotional-content h3 {
+            color: var(--primary);
+            margin-top: 2.5rem;
+        }
+        
+        .emotional-content h3:first-child {
+            margin-top: 0;
+        }
+        
+        .emotional-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        /* New Section: Why Coaching Standards Matter */
+        .coaching-standards {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+        }
+        .coaching-standards .section-title h2 {
+    color: white;
+}
+        
+        .standards-content {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 3rem;
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+            line-height: 1.9;
+        }
+        
+        .standards-content h2 {
+            color: white;
+        }
+        
+        .standards-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .standards-content a {
+            color: white;
+            text-decoration: underline;
+        }
+        
         /* Footer */
         footer {
             background-color: var(--dark);
             color: white;
-            padding: 3rem 0 1rem;
+            padding: 4rem 0 1.5rem;
         }
         
         .footer-content {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
         }
         
         .footer-column {
             flex: 1;
             min-width: 250px;
-            margin-bottom: 2rem;
-            padding: 0 1rem;
+            margin-bottom: 2.5rem;
+            padding: 0 1.5rem;
         }
         
         .footer-column h3 {
             color: white;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.8rem;
             position: relative;
-            padding-bottom: 10px;
+            padding-bottom: 12px;
         }
         
         .footer-column h3:after {
@@ -600,8 +798,8 @@
             position: absolute;
             bottom: 0;
             left: 0;
-            width: 40px;
-            height: 2px;
+            width: 50px;
+            height: 3px;
             background-color: var(--secondary);
         }
         
@@ -610,15 +808,16 @@
         }
         
         .footer-column ul li {
-            margin-bottom: 0.8rem;
+            margin-bottom: 1rem;
         }
         
         .footer-column ul li a {
             color: #ccc;
             text-decoration: none;
             transition: color 0.3s;
-            padding: 2px 4px;
+            padding: 4px 6px;
             border-radius: 3px;
+            font-size: 1.1rem;
         }
         
         .footer-column ul li a:hover,
@@ -629,33 +828,35 @@
         
         .social-links {
             display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
+            gap: 1.2rem;
+            margin-top: 1.5rem;
         }
         
         .social-links a {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 40px;
-            height: 40px;
+            width: 50px;
+            height: 50px;
             background: rgba(255,255,255,0.1);
             border-radius: 50%;
             color: white;
             transition: all 0.3s;
             text-decoration: none;
+            font-size: 1.3rem;
         }
         
         .social-links a:hover,
         .social-links a:focus {
             background: var(--secondary);
-            transform: translateY(-3px);
+            transform: translateY(-5px);
         }
         
         .footer-bottom {
             text-align: center;
-            padding-top: 2rem;
+            padding-top: 3rem;
             border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 1.1rem;
         }
         
         /* Modal */
@@ -670,12 +871,12 @@
             z-index: 1001;
             align-items: center;
             justify-content: center;
-            padding: 1rem;
+            padding: 2rem;
         }
         
         .modal-content {
             background-color: white;
-            padding: 2rem;
+            padding: 3rem;
             border-radius: 8px;
             max-width: 800px;
             width: 100%;
@@ -686,64 +887,39 @@
         
         .close-modal {
             position: absolute;
-            top: 1rem;
-            right: 1rem;
-            font-size: 1.5rem;
+            top: 1.5rem;
+            right: 1.5rem;
+            font-size: 2rem;
             cursor: pointer;
-            width: 40px;
-            height: 40px;
+            width: 50px;
+            height: 50px;
             display: flex;
             align-items: center;
             justify-content: center;
             border-radius: 50%;
             background: #eee;
             border: 2px solid transparent;
+            font-weight: bold;
         }
         
         .close-modal:focus {
             outline: 3px solid var(--secondary);
-            outline-offset: 2px;
+            outline-offset: 3px;
         }
         
         .calendly-info {
             background-color: #f9f9f9;
-            padding: 1rem;
+            padding: 1.5rem;
             border-radius: 8px;
-            margin: 1rem 0;
+            margin: 1.5rem 0;
             text-align: center;
+            font-size: 1.1rem;
         }
         
         .calendly-info i {
             color: var(--secondary);
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        /* High contrast mode support */
-        @media (prefers-contrast: high) {
-            :root {
-                --primary: #000080;
-                --secondary: #ffa500;
-                --text: #000000;
-                --background: #ffffff;
-            }
-            
-            .hero, .cta {
-                background: #000080;
-            }
-        }
-        
-        /* Reduced motion support */
-        @media (prefers-reduced-motion: reduce) {
-            * {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-            }
-            
-            .service-card:hover {
-                transform: none;
-            }
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
         }
         
         /* Responsive */
@@ -751,12 +927,19 @@
             .services-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
+            
+            h1 {
+                font-size: 2.8rem;
+            }
+            
+            h2 {
+                font-size: 2.2rem;
+            }
         }
         
         @media (max-width: 768px) {
             .header-container {
                 flex-direction: row;
-                text-align: center;
             }
             
             .menu-toggle {
@@ -765,16 +948,16 @@
             
             nav {
                 position: fixed;
-                top: 70px;
+                top: 80px;
                 left: -100%;
                 width: 80%;
-                height: calc(100vh - 70px);
+                height: calc(100vh - 80px);
                 background: white;
                 flex-direction: column;
                 transition: all 0.3s ease;
                 box-shadow: 2px 0 10px rgba(0,0,0,0.1);
                 z-index: 999;
-                padding: 2rem;
+                padding: 2.5rem;
             }
             
             nav.active {
@@ -786,15 +969,19 @@
             }
             
             nav ul li {
-                margin: 1rem 0;
+                margin: 1.5rem 0;
             }
             
             h1 {
-                font-size: 2.2rem;
+                font-size: 2.4rem;
             }
             
             h2 {
-                font-size: 1.8rem;
+                font-size: 2rem;
+            }
+            
+            h3 {
+                font-size: 1.7rem;
             }
             
             .services-grid {
@@ -813,13 +1000,21 @@
                 flex-direction: column;
             }
             
-            .problem-content {
-                padding: 1.5rem;
+            .problem-content, .emotional-content {
+                padding: 2rem;
             }
             
-            .problem-content li {
-                margin-bottom: 1.2rem;
-                line-height: 1.6;
+            .problem-content li, .emotional-content p {
+                font-size: 1.1rem;
+            }
+            
+            body {
+                font-size: 1.1rem;
+            }
+            
+            .btn {
+                padding: 14px 30px;
+                font-size: 1.1rem;
             }
         }
         
@@ -838,8 +1033,7 @@
     <header>
         <div class="container header-container">
             <a href="#" class="logo">
-                <!-- Replace with your actual logo -->
-                <div style="width: 40px; height: 40px; background: var(--secondary); border-radius: 5px; margin-right: 10px; display: flex; align-items: center; justify-content: center; color: white;">
+                <div style="width: 50px; height: 50px; background: var(--secondary); border-radius: 5px; margin-right: 12px; display: flex; align-items: center; justify-content: center; color: white;">
                     <i class="fas fa-user-ninja" aria-hidden="true"></i>
                 </div>
                 Career<span>Ninja</span>
@@ -854,7 +1048,7 @@
             <nav id="nav" aria-label="Main navigation">
                 <ul>
                     <li><a href="#services">Services</a></li>
-                    <li><a href="#process">Process</a></li>
+                    <li><a href="#process">The Process</a></li>
                     <li><a href="#testimonials">Success Stories</a></li>
                     <li><a href="#book">Book</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -875,8 +1069,8 @@
                 </div>
                 
                 <div class="author-badge">
-                    <!-- Replace with your photo -->
-<img src="public/images/author-photo.jpg" alt="Author Photo" width="50" height="50" style="border-radius: 50%;">                    <div>
+                    <img src="public/images/author-photo.jpg" alt="Kendra Weinisch - CareerNinja Founder" width="60" height="60">
+                    <div>
                         <p>Author of the upcoming book: <strong>"The Encore Executive"</strong></p>
                         <small>Redefining Retirement, Unretirement, and Part-Time C-Suite Leadership</small>
                     </div>
@@ -894,9 +1088,9 @@
             <div class="problem-content">
                 <p>After decades of climbing the corporate ladder, you've reached the pinnacle of success. But now you find yourself asking: "What's next?" The transition from corporate leadership to a meaningful encore career is fraught with unique challenges:</p>
                 <ul>
-                    <li>Uncertainty about how to translate corporate skills to the social impact sector</li>
-                    <li>Lack of clarity about which cause areas align with your values and expertise</li>
-                    <li>Difficulty navigating the very different landscape of nonprofit and social enterprise</li>
+                    <li>Uncertainty about how to translate corporate skills to your encore career</li>
+                    <li>Lack of clarity about which opportunities align with your values and expertise</li>
+                    <li>Difficulty navigating the landscapes of flexible executive and part-time CXO work</li>
                     <li>Concerns about financial sustainability while making a difference</li>
                     <li>Balancing part-time C-suite roles with personal fulfillment goals</li>
                 </ul>
@@ -905,17 +1099,17 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" aria-labelledby="services-heading">
+    <section id="services">
         <div class="container">
             <div class="section-title">
-                <h2 id="services-heading">Executive Encore Career Services</h2>
+                <h2>Executive Encore Career Services</h2>
                 <p>Tailored programs designed for seasoned executives transitioning to meaningful encore careers</p>
             </div>
             <div class="services-grid">
                 <!-- Introductory Chat -->
                 <div class="service-card">
                     <div class="service-image">
-                        <span aria-hidden="true"><i class="fas fa-comments fa-3x" style="color: #1a5276;"></i></span>
+                        <i class="fas fa-comments fa-3x" style="color: #1a5276;"></i>
                         <div class="service-badge">COMPLIMENTARY</div>
                     </div>
                     <div class="service-content">
@@ -938,7 +1132,7 @@
                 <!-- Hourly Rates -->
                 <div class="service-card">
                     <div class="service-image">
-                        <span aria-hidden="true"><i class="fas fa-clock fa-3x" style="color: #1a5276;"></i></span>
+                        <i class="fas fa-clock fa-3x" style="color: #1a5276;"></i>
                     </div>
                     <div class="service-content">
                         <h3>Executive Career Coaching</h3>
@@ -961,7 +1155,7 @@
                 <!-- Fractional Executive Launch -->
                 <div class="service-card">
                     <div class="service-image">
-                        <span aria-hidden="true"><i class="fas fa-briefcase fa-3x" style="color: #1a5276;"></i></span>
+                        <i class="fas fa-briefcase fa-3x" style="color: #1a5276;"></i>
                         <div class="service-badge">MOST POPULAR</div>
                     </div>
                     <div class="service-content">
@@ -986,7 +1180,7 @@
                 <!-- Board-Ready Accelerator -->
                 <div class="service-card">
                     <div class="service-image">
-                        <span aria-hidden="true"><i class="fas fa-chalkboard-teacher fa-3x" style="color: #1a5276;"></i></span>
+                        <i class="fas fa-chalkboard-teacher fa-3x" style="color: #1a5276;"></i>
                         <div class="service-badge">PREMIUM</div>
                     </div>
                     <div class="service-content">
@@ -994,7 +1188,7 @@
                         <div class="service-duration">6-week comprehensive program</div>
                         <p>Fast-track your journey to influential corporate and nonprofit board positions.</p>
                         <ul class="service-features">
-                            <li>NACD Directorship Certification (NACD.DC) preparation</li>
+                           <li> <a href="https://www.nacdonline.org/" target="_blank" rel="noopener noreferrer">NACD Directorship Certification preparation</a></li>
                             <li>Complete Director Portfolio development</li>
                             <li>Executive LinkedIn profile transformation</li>
                             <li>Board-specific resume and bio creation</li>
@@ -1018,16 +1212,15 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section class="testimonials" id="testimonials" aria-labelledby="testimonials-heading">
+    <section class="testimonials" id="testimonials">
         <div class="container">
             <div class="section-title">
-                <h2 id="testimonials-heading">Success Stories</h2>
+                <h2>Success Stories</h2>
             </div>
             <div class="testimonial-grid">
                 <div class="testimonial-card">
-                    <p class="testimonial-text">"After 30 years in finance, I wanted to bring my expertise to education reform. Kendra helped me navigate the transition and I'm now serving as CFO for a national education nonprofit, making more impact than I ever imagined."</p>
+                    <p class="testimonial-text">"After 30 years in finance, I wanted to bring my expertise to education reform. Kendra helped me navigate the transition and I'm now making more impact than I ever imagined."</p>
                     <div class="testimonial-author">
-                        <!-- Replace with client photo -->
                         <div class="testimonial-author-info">
                             Michael T. <span class="testimonial-role">Former Investment Banker</span>
                         </div>
@@ -1036,16 +1229,14 @@
                 <div class="testimonial-card">
                     <p class="testimonial-text">"The Board Placement Program was exactly what I needed. Within four months, I was placed on the board of an environmental organization that aligns perfectly with my values and allows me to contribute at a strategic level."</p>
                     <div class="testimonial-author">
-                        <!-- Replace with client photo -->
                         <div class="testimonial-author-info">
                             Susan L. <span class="testimonial-role">Former Tech Executive</span>
                         </div>
                     </div>
                 </div>
                 <div class="testimonial-card">
-                    <p class="testimonial-text">"As a semi-retired executive, I wanted meaningful part-time work. Kendra helped me move into a fractional CMO role that still allows flexibility."</p>
+                    <p class="testimonial-text">"As a semi-retired executive, I wanted meaningful part-time work. Kendra helped me secure a fractional CMO role at two growing social enterprises—perfect balance of impact and flexibility."</p>
                     <div class="testimonial-author">
-                        <!-- Replace with client photo -->
                         <div class="testimonial-author-info">
                             Robert K. <span class="testimonial-role">Former Fortune 500 CMO</span>
                         </div>
@@ -1056,10 +1247,10 @@
     </section>
 
     <!-- Process Section -->
-    <section id="process" aria-labelledby="process-heading">
+    <section id="process">
         <div class="container">
             <div class="section-title">
-                <h2 id="process-heading">The Process</h2>
+                <h2>The Process</h2>
             </div>
             <div class="process-steps">
                 <div class="step">
@@ -1086,37 +1277,95 @@
         </div>
     </section>
 
-   <!-- Book Section -->
-<section class="book-section" id="book" aria-labelledby="book-heading">
-    <div class="container book-container">
-        <div class="book-image">
-            <img src="public/images/book-cover.png" alt="Book Cover: The Encore Executive" width="280" height="380">
+   
+
+
+<!-- Book Section -->
+<section class="book-section" id="book">
+    <div class="container">
+        <div class="section-title">
+            <h2>Discover Your Next Chapter</h2>
         </div>
-        <div class="book-content">
-            <h2 id="book-heading">Discover Your Next Chapter</h2>
-            <p>In my upcoming book <strong>"The Encore Executive: Redefining Retirement, Unretirement, and Part-Time C-Suite Leadership"</strong>, I share insights from working with hundreds of executives navigating their career transitions.</p>
-            <p>Learn how to:</p>
-        </br>
-            <ul>
-                <li>Leverage your executive experience for social impact</li>
-                <li>Create a portfolio career that matches your desired lifestyle</li>
-                <li>Navigate the startup and nonprofit landscapes</li>
-                <li>Secure meaningful board positions and advisory roles</li>
-                <li>Balance financial needs with purposeful work</li>
-            </ul>
-        </br>
-            <p><strong>Be the first to know when the book launches!</strong></p>
-    </br>
-            <a href="#" class="btn" id="book-notify">Notify Me</a>
+        
+        <div class="book-container">
+            <div class="book-image">
+ <img src="public/images/book-cover.png" alt="Book Cover: The Encore Executive by Kendra Weinisch" class="book-cover">                  
+                </div>
+            </div>
+            
+            <div class="book-content">
+                <p class="intro">In my upcoming book <strong>"The Encore Executive: Redefining Retirement, Unretirement, and Part-Time C-Suite Leadership"</strong>, I share insights from working with executives navigating their career transitions.</p>
+                
+                <div class="learn-list">
+                    <h3>Learn how to:</h3>
+                    <ul>
+                        <li>Leverage your executive experience for social and financial impact</li>
+                        <li>Create a portfolio career that matches your desired lifestyle</li>
+                        <li>Navigate the startup, corporate board, and nonprofit landscapes</li>
+                        <li>Secure meaningful board positions and advisory roles</li>
+                        <li>Balance financial needs with purposeful work</li>
+                    </ul>
+                </div>
+                
+                <div class="cta-box">
+                    <p><strong>Be the first to know when the book launches!</strong></p>
+                    <a href="#" class="btn" id="book-notify">Notify Me</a>
+                </div>
+            </div>
         </div>
     </div>
 </section>
+
+
+
+
+
     <!-- CTA Section -->
-    <section class="cta" aria-labelledby="cta-heading">
+    <section class="cta">
         <div class="container">
-            <h2 id="cta-heading">Ready to Transform Your Success Into Significance?</h2>
+            <h2>Ready to Transform Your Success Into Significance?</h2>
             <p>Book your complimentary 15-minute Encore Career Assessment today</p>
             <a href="#" class="btn" id="final-cta-button">Schedule Your Free Assessment</a>
+        </div>
+    </section>
+
+    <!-- New Section: Navigating the Emotional Journey -->
+    <section class="emotional-journey">
+        <div class="container">
+            <div class="section-title">
+                <h2>Navigating the Emotional Journey</h2>
+            </div>
+            <div class="emotional-content">
+                <p>The transition to an encore career brings legitimate concerns. Let's address them directly:</p>
+                
+                <h3>Fear of Irrelevance</h3>
+                <p>"Will my experience translate?" Your C-suite expertise is a superpower for growing organizations. We help you reframe enterprise skills for startups and mission-driven work.</p>
+                
+                <h3>Financial Anxiety</h3>
+                <p>"Can I maintain my lifestyle?" We build practical plans balancing purpose and profit through fractional roles, board service, and advisory work.</p>
+                
+                <h3>Identity Shift</h3>
+                <p>"Who am I without my title?" We help craft a new professional identity rooted in your legacy but focused on future impact.</p>
+                
+                <h3>Overwhelm</h3>
+                <p>"Where do I start?" Our structured process provides clarity and a step-by-step roadmap for your transition.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Section: Why Coaching Standards Matter -->
+    <section class="coaching-standards">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Coaching Standards Matter</h2>
+            </div>
+            <div class="standards-content">
+                <p>Securing influential board positions or valuable advisor roles is not easy, quick, or guaranteed. These competitive opportunities require proven value and strategic positioning. An executive transition requires a trusted guide who adheres to professional standards.</p>
+                
+                <p>The <a href="https://coachingfederation.org/" target="_blank" rel="noopener noreferrer">International Coaching Federation (ICF)</a> sets rigorous ethical standards and competencies for the coaching profession worldwide. A core principle is that coaches cannot guarantee specific outcomes—like securing a board seat—as results depend on multiple factors including your active participation.</p>
+                
+                <p>This ethical framework ensures transparency, realistic expectations, and focus on your development rather than empty promises. It builds the trust essential for a successful transition partnership.</p>
+            </div>
         </div>
     </section>
 
@@ -1126,8 +1375,13 @@
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>CareerNinja</h3>
-                    <p>Helping accomplished executives launch meaningful encore careers that leverage their expertise.</p>
-                    
+                    <p>Helping accomplished executives launch meaningful encore careers that leverage their expertise for social impact.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Visit our LinkedIn page"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Visit our Twitter page"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Visit our Facebook page"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Visit our Instagram page"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    </div>
                 </div>
                 <div class="footer-column">
                     <h3>Services</h3>
@@ -1141,14 +1395,8 @@
                 <div class="footer-column">
                     <h3>Contact</h3>
                     <ul>
-                        <li><i class="fas fa-envelope" aria-hidden="true"></i> info@careerninja.com</li>
+                        <li><i class="fas fa-envelope" aria-hidden="true"></i> info@yourcareerninja.com</li>
                     </ul>
-                     <div class="social-links">
-                        <a href="#" aria-label="Visit My LinkedIn page"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
-                        <a href="#" aria-label="Visit My Twitter page"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-                        <a href="#" aria-label="Visit our Facebook page"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-                        <a href="#" aria-label="Visit our Instagram page"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -1157,138 +1405,252 @@
         </div>
     </footer>
 
-   <!-- Booking Modal -->
-<div class="modal" id="booking-modal" role="dialog" aria-labelledby="modal-title" aria-modal="true" hidden>
-    <!-- ... your booking modal content ... -->
-</div>
-
-<!-- Book Notification Modal - MOVED BEFORE THE SCRIPT TAG -->
-<div class="modal" id="book-notify-modal" role="dialog" aria-labelledby="book-modal-title" aria-modal="true" hidden>
-    <div class="modal-content" style="max-width: 500px;">
-        <button class="close-modal" aria-label="Close modal">&times;</button>
-        <h2 id="book-modal-title">Get Notified When "The Encore Executive" Launches</h2>
-        <p>Be the first to know when my new book on encore careers, unretirement, and part-time C-suite executives is available.</p>
-        
-        <form id="book-notify-form" action="https://formsubmit.co/info@yourcareerninja.com" method="POST" style="margin-top: 1.5rem;">
-            <!-- FormSubmit.co configuration -->
-            <input type="hidden" name="_subject" value="New Book Notification Signup">
-            <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_next" value="https://yourcareerninja.com/thank-you.html">
-            <input type="hidden" name="_captcha" value="false">
+    <!-- Booking Modal -->
+    <div class="modal" id="booking-modal" role="dialog" aria-labelledby="modal-title" aria-modal="true" hidden>
+        <div class="modal-content">
+            <button class="close-modal" aria-label="Close modal">&times;</button>
+            <h2 id="modal-title">Schedule Your Session</h2>
+            <p>Choose a service and select an available time slot. Calendly will handle both scheduling and payment processing.</p>
             
-            <div style="margin-bottom: 1rem;">
-                <label for="notify-name" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Your Name</label>
-                <input type="text" id="notify-name" name="name" placeholder="First and Last Name" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px;" required>
+            <div class="calendly-info">
+                <i class="fas fa-lock"></i>
+                <p>Secure booking and payment processing powered by Calendly</p>
             </div>
-            <div style="margin-bottom: 1.5rem;">
-                <label for="notify-email" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Email Address</label>
-                <input type="email" id="notify-email" name="email" placeholder="your@email.com" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px;" required>
-            </div>
-            <div style="margin-bottom: 1.5rem;">
-                <label style="display: flex; align-items: start;">
-                    <input type="checkbox" name="consent" required style="margin-right: 0.5rem; margin-top: 0.2rem;">
-                    <span>I agree to receive updates about "The Encore Executive" book launch. I can unsubscribe at any time.</span>
-                </label>
-            </div>
-            <button type="submit" class="btn" style="width: 100%;">Notify Me When the Book Launches</button>
-        </form>
-        
-        <div id="book-notify-success" style="display: none; text-align: center; padding: 2rem;">
-            <i class="fas fa-check-circle" style="font-size: 3rem; color: var(--success); margin-bottom: 1rem;"></i>
-            <h3>Thank You!</h3>
-            <p>You've been added to our notification list. We'll email you when "The Encore Executive" is available.</p>
+            
+            <!-- Calendly inline widget begin -->
+            <div class="calendly-inline-widget" data-url="https://calendly.com/kendraweinisch" style="min-width:320px;height:630px;"></div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+            <!-- Calendly inline widget end -->
         </div>
     </div>
-</div>
 
-<script>
-    // Your JavaScript code here
-    // Mobile menu functionality
-    const mobileMenu = document.getElementById('mobile-menu');
-    const nav = document.getElementById('nav');
-    
-    // ... rest of your JavaScript code ...
-    
-    // REPLACE the simple book notification code with this:
-    
-    // Book notification modal functionality
-    const bookNotifyModal = document.getElementById('book-notify-modal');
-    const bookNotifyBtn = document.getElementById('book-notify');
-    const bookNotifyForm = document.getElementById('book-notify-form');
-    const bookNotifySuccess = document.getElementById('book-notify-success');
-    const closeBookModal = bookNotifyModal.querySelector('.close-modal');
+    <!-- Book Notification Modal -->
+    <div class="modal" id="book-notify-modal" role="dialog" aria-labelledby="book-modal-title" aria-modal="true" hidden>
+        <div class="modal-content" style="max-width: 500px;">
+            <button class="close-modal" aria-label="Close modal">&times;</button>
+            <h2 id="book-modal-title">Get Notified When "The Encore Executive" Launches</h2>
+            <p>Be the first to know when my new book on encore careers, unretirement, and part-time C-suite executives is available.</p>
+            
+            <form id="book-notify-form" action="https://formsubmit.co/kweinisc@hotmail.com" method="POST" style="margin-top: 1.5rem;">
+                <!-- FormSubmit.co configuration -->
+                <input type="hidden" name="_subject" value="New Book Notification Signup - The Encore Executive">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_next" value="https://yourcareerninja.com/thank-you.html">
+                <input type="hidden" name="_captcha" value="false">
+                
+                <div style="margin-bottom: 1rem;">
+                    <label for="notify-name" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Your Name</label>
+                    <input type="text" id="notify-name" name="name" placeholder="First and Last Name" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px;" required>
+                </div>
+                <div style="margin-bottom: 1.5rem;">
+                    <label for="notify-email" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Email Address</label>
+                    <input type="email" id="notify-email" name="email" placeholder="your@email.com" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px;" required>
+                </div>
+                <div style="margin-bottom: 1.5rem;">
+                    <label style="display: flex; align-items: start;">
+                        <input type="checkbox" name="consent" required style="margin-right: 0.5rem; margin-top: 0.2rem;">
+                        <span>I agree to receive updates about "The Encore Executive" book launch. I can unsubscribe at any time.</span>
+                    </label>
+                </div>
+                <button type="submit" class="btn" style="width: 100%;">Notify Me When the Book Launches</button>
+            </form>
+            
+            <div id="book-notify-success" style="display: none; text-align: center; padding: 2rem;">
+                <i class="fas fa-check-circle" style="font-size: 3rem; color: var(--success); margin-bottom: 1rem;"></i>
+                <h3>Thank You!</h3>
+                <p>You've been added to our notification list. We'll email you when "The Encore Executive" is available.</p>
+            </div>
+        </div>
+    </div>
 
-    // Open book notification modal
-    bookNotifyBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        bookNotifyModal.removeAttribute('hidden');
-        bookNotifyModal.style.display = 'flex';
-        document.body.style.overflow = 'hidden';
-        document.getElementById('notify-name').focus();
-    });
-
-    // Close book notification modal
-    closeBookModal.addEventListener('click', function() {
-        bookNotifyModal.setAttribute('hidden', 'true');
-        bookNotifyModal.style.display = 'none';
-        document.body.style.overflow = 'auto';
-    });
-
-    // Close modal when clicking outside
-    bookNotifyModal.addEventListener('click', function(e) {
-        if (e.target === bookNotifyModal) {
-            bookNotifyModal.setAttribute('hidden', 'true');
-            bookNotifyModal.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-    });
-
-    // Close modal with Escape key
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && !bookNotifyModal.hasAttribute('hidden')) {
-            bookNotifyModal.setAttribute('hidden', 'true');
-            bookNotifyModal.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-    });
-
-    // Handle form submission
-    bookNotifyForm.addEventListener('submit', function(e) {
-        // Let FormSubmit.co handle the actual submission
-        // We'll just show a success message
-        e.preventDefault();
-        bookNotifyForm.style.display = 'none';
-        bookNotifySuccess.style.display = 'block';
+    <script>
+        // Mobile menu functionality
+        const mobileMenu = document.getElementById('mobile-menu');
+        const nav = document.getElementById('nav');
         
-        // Keep the modal open for 3 seconds so users see the success message
-        setTimeout(function() {
-            bookNotifyModal.setAttribute('hidden', 'true');
-            bookNotifyModal.style.display = 'none';
-            document.body.style.overflow = 'auto';
-            // Reset form for next time
-            bookNotifyForm.reset();
-            bookNotifyForm.style.display = 'block';
-            bookNotifySuccess.style.display = 'none';
-        }, 3000);
+        mobileMenu.addEventListener('click', function() {
+            const expanded = this.getAttribute('aria-expanded') === 'true' || false;
+            this.setAttribute('aria-expanded', !expanded);
+            nav.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
         
-        // Submit the form programmatically after showing success message
-        setTimeout(function() {
-            // Create a temporary form submission
-            const formData = new FormData(bookNotifyForm);
-            fetch(bookNotifyForm.action, {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            }).then(response => {
-                console.log('Form submitted successfully');
-            }).catch(error => {
-                console.log('Form submission error:', error);
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function() {
+                nav.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                mobileMenu.setAttribute('aria-expanded', 'false');
             });
-        }, 1000);
-    });
-</script>
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Focus the target element for keyboard users
+                    targetElement.setAttribute('tabindex', '-1');
+                    targetElement.focus();
+                }
+            });
+        });
+        
+        // Modal functionality
+        const modal = document.getElementById('booking-modal');
+        const ctaButtons = document.querySelectorAll('#cta-button, #final-cta-button, .service-card .btn');
+        const closeModal = document.querySelector('.close-modal');
+        
+        function openModal() {
+            modal.removeAttribute('hidden');
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+            closeModal.focus();
+            
+            // If service button clicked, set the service type
+            if (this.dataset.service) {
+                localStorage.setItem('selectedService', this.dataset.service);
+            }
+        }
+        
+        function closeModalFunc() {
+            modal.setAttribute('hidden', 'true');
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+            
+            // Return focus to the button that opened the modal
+            const lastFocused = document.querySelector(':focus');
+            if (lastFocused && lastFocused !== closeModal) {
+                lastFocused.focus();
+            }
+        }
+        
+        ctaButtons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                openModal.call(this);
+            });
+        });
+        
+        closeModal.addEventListener('click', closeModalFunc);
+        
+        window.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                closeModalFunc();
+            }
+        });
+        
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && !modal.hasAttribute('hidden')) {
+                closeModalFunc();
+            }
+        });
+        
+        // Book notification modal functionality
+        const bookNotifyModal = document.getElementById('book-notify-modal');
+        const bookNotifyBtn = document.getElementById('book-notify');
+        const bookNotifyForm = document.getElementById('book-notify-form');
+        const bookNotifySuccess = document.getElementById('book-notify-success');
+        const closeBookModal = bookNotifyModal.querySelector('.close-modal');
 
+        // Open book notification modal
+        bookNotifyBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            bookNotifyModal.removeAttribute('hidden');
+            bookNotifyModal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+            document.getElementById('notify-name').focus();
+        });
+
+        // Close book notification modal
+        closeBookModal.addEventListener('click', function() {
+            bookNotifyModal.setAttribute('hidden', 'true');
+            bookNotifyModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+
+        // Close modal when clicking outside
+        bookNotifyModal.addEventListener('click', function(e) {
+            if (e.target === bookNotifyModal) {
+                bookNotifyModal.setAttribute('hidden', 'true');
+                bookNotifyModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && !bookNotifyModal.hasAttribute('hidden')) {
+                bookNotifyModal.setAttribute('hidden', 'true');
+                bookNotifyModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Handle form submission
+        bookNotifyForm.addEventListener('submit', function(e) {
+            // Let FormSubmit.co handle the actual submission
+            // We'll just show a success message
+            e.preventDefault();
+            bookNotifyForm.style.display = 'none';
+            bookNotifySuccess.style.display = 'block';
+            
+            // Keep the modal open for 3 seconds so users see the success message
+            setTimeout(function() {
+                bookNotifyModal.setAttribute('hidden', 'true');
+                bookNotifyModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+                // Reset form for next time
+                bookNotifyForm.reset();
+                bookNotifyForm.style.display = 'block';
+                bookNotifySuccess.style.display = 'none';
+            }, 3000);
+            
+            // Submit the form programmatically after showing success message
+            setTimeout(function() {
+                // Create a temporary form submission
+                const formData = new FormData(bookNotifyForm);
+                fetch(bookNotifyForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                }).then(response => {
+                    console.log('Form submitted successfully');
+                }).catch(error => {
+                    console.log('Form submission error:', error);
+                });
+            }, 1000);
+        });
+
+        // Helper for visually hidden elements
+        const style = document.createElement('style');
+        style.textContent = `
+            .visually-hidden {
+                position: absolute;
+                width: 1px;
+                height: 1px;
+                padding: 0;
+                margin: -1px;
+                overflow: hidden;
+                clip: rect(0, 0, 0, 0);
+                white-space: nowrap;
+                border: 0;
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
 </body>
 </html>
